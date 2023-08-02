@@ -12,7 +12,8 @@ function ArticleItem({article}) {
       <div className='item-details'>
         <p className='item-title'>{title}</p>
         <p className='item-description'>{description}</p>
-        <p className='item-authors'>By {author} </p>
+        <p className='item-date'>Published on {publishedAt.split('T')[0]}</p>
+        <p className='item-authors'>By {author ?? 'Anonymous'} </p>
       </div>
       <button className='item-button'>Read more on {source.name}</button>
     </div>
