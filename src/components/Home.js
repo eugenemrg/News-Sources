@@ -8,12 +8,15 @@ const API_KEY = "607db713f627456d9d081ee0331ce09d";
 const Home = () => {
   const { category } = useParams();
   const [articles, setArticles] = useState([]);
+  const [headerText, setHeaderText] = useState('')
 
   useEffect(() => {
     const fetchArticles = () => {
-      let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
-      if (category) {
-        url = `https://newsapi.org/v2/top-headlines/sources?category=${category}&apiKey=${API_KEY}`;
+      let url = `https://newsapi.org/v2/top-headlines?language=en&country=us&apiKey=${API_KEY}`;
+      setHeaderText('Latest News')
+      if (category && category!=='home') {
+        url = `https://newsapi.org/v2/top-headlines?language=en&category=${category}&apiKey=${API_KEY}`;
+        setHeaderText(`${category} News`)
       }
 
       fetch(url)
@@ -38,6 +41,7 @@ const Home = () => {
       })
       .then((data) => {
         setArticles(data.articles);
+        setHeaderText(`Search News: ${searchTerm}`)
       })
       .catch((error) => {
         console.error("Error fetching articles:", error);
@@ -46,9 +50,11 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Latest News</h1>
-      <Search handleSearch={handleSearch} />
-      <Article articles={articles} />
+      <SearchBar handleSearch={handleSearch} />
+      <div className='news-articles-parent'>
+        <h1>{headerText}</h1>
+        <Articles articles={articles} />
+      </div>
     </div>
   );
 }
