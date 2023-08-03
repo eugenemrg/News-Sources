@@ -10,6 +10,7 @@
 }
 
 .App{
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -173,4 +174,30 @@ input[type='submit']:hover{
 
 .item-button:hover{
   background-color: lightgray;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 24px 0px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+}
+
+footer div p{
+    font-weight: bold;
+}
+
+footer div a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
 }

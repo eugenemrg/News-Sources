@@ -4,12 +4,10 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <h3>Contact Us</h3>
-        <p>Email: newssources@gmail.com</p>
-        <p>Phone: +(254) 790564507</p>
-        <p> Copyright info </p>
-        <p> Privacy Policy </p>
-        <p> Terms & Condition </p>
+        <p>NS Group</p>
+        <a href='mailto:newssources@example.com'>newssources@example.com</a>
+        <a href='#'>Privacy Policy</a>
+        <a href='#'>Terms & Conditions</a>
       </div>
     </footer>
   );
