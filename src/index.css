@@ -10,7 +10,6 @@
 }
 
 .App{
-  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -179,10 +178,9 @@ input[type='submit']:hover{
 footer{
     background-color: black;
     color: white;
+    margin-top: 24px;
     padding: 24px 0px;
-    position: absolute;
     width: 100%;
-    bottom: 0px;
 }
 
 footer div{
