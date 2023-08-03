@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Articles from "./components/Articles";
-import SearchBar from "./components/SearchBar";
+import Article from "./Article";
+import Search from "./Search";
 
 const API_KEY = "607db713f627456d9d081ee0331ce09d";
 
@@ -47,8 +47,8 @@ const Home = () => {
   return (
     <div>
       <h1>Latest News</h1>
-      <Articles articles={articles} />
-      <SearchBar handleSearch={handleSearch} />
+      <Search handleSearch={handleSearch} />
+      <Article articles={articles} />
     </div>
   );
 }
