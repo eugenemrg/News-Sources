@@ -6,9 +6,9 @@ function ArticleItem({ article }) {
 
   return (
     <div className='article-item'>
-      <a className='article-item-link' href={url} target='_blank'>
+      <a className='article-item-link' href={url} target='_blank' rel="noreferrer">
         <div className='item-image'>
-          <img src={urlToImage} alt={title} ></img>
+          <img src={urlToImage ?? "https://placehold.co/320x180?text=News"} alt={title} onError={e => e.target.setAttribute("src", "https://placehold.co/320x180?text=News")} ></img>
         </div>
         <div className='item-details'>
           <p className='item-title'>{title}</p>

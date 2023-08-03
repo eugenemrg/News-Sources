@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-function Search({ handleSearch}) {
+function Search({ handleSearch }) {
     const [searchInput, setSearchInput] = useState('')
 
     function handleChange(e) {
@@ -17,8 +17,8 @@ function Search({ handleSearch}) {
     return (
         <form onSubmit={handleSubmit}>
             <label htmlFor='search'></label>
-            <input type='text' name='search' value={searchInput} onChange={handleChange} />
-            <input type='submit' value='Submit'/>
+            <input type='text' name='search' placeholder='Search for news that interests you' value={searchInput} onChange={handleChange} />
+            <input type='submit' value='Search' />
         </form>
     )
 }
