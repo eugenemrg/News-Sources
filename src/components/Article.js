@@ -4,8 +4,8 @@ import ArticleItem from './ArticleItem';
 const Articles = ({ articles }) => {
   return (
     <div className='articles'>
-      {articles.map((article, index) => (
-        <ArticleItem key={index} article={article} />
+      {articles.map((article) => (
+        <ArticleItem key={article.id} article={article} />
       ))}
     </div>
   );

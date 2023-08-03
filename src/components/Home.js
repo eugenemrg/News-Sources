@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Article from "./Article";
 import Search from "./Search";
 
-const API_KEY = "607db713f627456d9d081ee0331ce09d";
+const API_KEY = "b2698829b37a46a9a3aa2a713ea5f145";
 
 const Home = () => {
   const { category } = useParams();
