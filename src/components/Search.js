@@ -11,8 +11,7 @@ function Search({ handleSearch }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         handleSearch(searchInput);
-        const searchQuery = searchInput
-        console.log('search Query:', searchQuery);
+        setSearchInput('')
     }
     return (
         <form onSubmit={handleSubmit}>
