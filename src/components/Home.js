@@ -14,7 +14,7 @@ const Home = () => {
     const fetchArticles = () => {
       let url = `https://newsapi.org/v2/top-headlines?language=en&country=us&apiKey=${API_KEY}`;
       setHeaderText('Latest News')
-      if (category && category!=='home') {
+      if (category && category!=='home' && category !=='News-Sources') {
         url = `https://newsapi.org/v2/top-headlines?language=en&category=${category}&apiKey=${API_KEY}`;
         setHeaderText(`${category} News`)
       }
