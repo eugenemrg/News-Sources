@@ -21,9 +21,12 @@ const Home = () => {
 
       fetch(url)
         .then((response) => {
+          console.log(url);
+          console.log(response);
           return response.json();
         })
         .then((data) => {
+          console.log(data);
           setArticles(data.articles);
         })
         .catch((error) => {
