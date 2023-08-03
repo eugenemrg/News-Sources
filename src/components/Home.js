@@ -50,10 +50,10 @@ const Home = () => {
 
   return (
     <div>
-      <SearchBar handleSearch={handleSearch} />
+      <Search handleSearch={handleSearch} />
       <div className='news-articles-parent'>
         <h1>{headerText}</h1>
-        <Articles articles={articles} />
+        <Article articles={articles} />
       </div>
     </div>
   );
