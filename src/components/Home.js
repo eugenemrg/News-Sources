@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Articles from "./Article";
-import SearchBar from "./Search";
+import Article from "./Article";
+import Search from "./Search";
 
 const API_KEY = "607db713f627456d9d081ee0331ce09d";
 
